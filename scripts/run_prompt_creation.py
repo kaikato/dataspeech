@@ -368,7 +368,7 @@ def main():
         raise ValueError("`is_single_speaker=True` but `speaker_name` is not specified. Specify it or remove `is_single_speaker`.")
 
     if not data_args.is_single_speaker and data_args.speaker_name:
-        raise ValueError(f"`is_single_speaker=False` but `speaker_name=data_args.speaker_name` is not specified. Add `--is_single_speaker` or remove `speaker_name`.")
+        raise ValueError(f"`is_single_speaker=False` but `speaker_name=data_args.speaker_name` is specified. Add `--is_single_speaker` or remove `speaker_name`.")
 
     accelerator = Accelerator()
 
